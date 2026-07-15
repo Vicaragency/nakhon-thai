@@ -33,37 +33,39 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Overlappende food-fotografie, bleeding vanaf de onderrand */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[360px]">
+      {/* Overlappende food-fotografie, bleeding vanaf de onderrand.
+          Hover op een bord: komt omhoog, richt zich op en volledig in beeld. */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[420px]">
         <div className="relative mx-auto h-full w-full max-w-[1440px]">
-          {/* linkerschotel, bleeding in de onderhoek */}
-          <div className="absolute -left-20 bottom-[-30px] hidden h-[340px] w-[360px] -rotate-6 sm:block">
+          {/* linkerschotel (kleiner, gelijk aan rechts) */}
+          <div className="pointer-events-auto absolute -left-24 bottom-[-34px] hidden h-[400px] w-[440px] -rotate-6 transition-transform duration-300 ease-out will-change-transform hover:z-30 hover:-translate-y-8 hover:rotate-0 hover:scale-[1.04] sm:block">
             <Image
               src="/images/cta-dumplings.png"
               alt="Thaise dim sum in een kom"
               fill
-              sizes="360px"
+              sizes="440px"
               className="object-contain object-bottom"
             />
           </div>
-          {/* centraal schelpgerecht, prominent */}
-          <div className="absolute bottom-[-36px] left-1/2 h-[420px] w-[540px] -translate-x-1/2">
+          {/* centraal schelpgerecht, grootst en prominent.
+              Geen hover:z-30 → blijft achter de titel zodat die leesbaar blijft. */}
+          <div className="pointer-events-auto absolute bottom-[-56px] left-1/2 h-[500px] w-[650px] -translate-x-1/2 transition-transform duration-300 ease-out will-change-transform hover:-translate-y-8 hover:scale-[1.04]">
             <Image
               src="/images/hero-scallops.png"
               alt="Gestoomde sint-jakobsschelpen met orchidee"
               fill
               priority
-              sizes="540px"
+              sizes="720px"
               className="object-contain object-bottom"
             />
           </div>
-          {/* rechterschotel, bleeding in de onderhoek */}
-          <div className="absolute -right-16 bottom-[-30px] hidden h-[340px] w-[360px] rotate-6 sm:block">
+          {/* rechterschotel (kleiner, gelijk aan links) */}
+          <div className="pointer-events-auto absolute -right-20 bottom-[-34px] hidden h-[400px] w-[440px] rotate-6 transition-transform duration-300 ease-out will-change-transform hover:z-30 hover:-translate-y-8 hover:rotate-0 hover:scale-[1.04] sm:block">
             <Image
               src="/images/cta-soup.png"
               alt="Pittige Thaise soep"
               fill
-              sizes="360px"
+              sizes="440px"
               className="object-contain object-bottom"
             />
           </div>
