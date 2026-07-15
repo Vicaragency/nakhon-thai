@@ -1,0 +1,148 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: var(--font-oswald), "Oswald", "Arial Narrow", sans-serif;
+  --font-heading: var(--font-display);
+
+  /* Nakhon Thai brand palette (uit Figma variables) */
+  --color-brand: #910402;
+  --color-brand-60: #7e0503;
+  --color-brand-dark: #5f0201;
+  --color-brand-40: #74200f;
+  --color-heading: #74200f;
+  --color-neon-red: #e7302d;
+  --color-hotpink: #ed3fa6;
+  --color-yellow: #ffb648;
+  --color-teal: #90e6e1;
+  --color-beige: #fbf8f1;
+  --color-beige-20: #fdefd4;
+  --color-beige-40: #e9b689;
+  --color-ink: #2a1109;
+
+  /* shadcn base (behouden voor de UI-primitives) */
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #fbf8f1;
+  --foreground: #2a1109;
+  --card: #ffffff;
+  --card-foreground: #2a1109;
+  --popover: #ffffff;
+  --popover-foreground: #2a1109;
+  --primary: #910402;
+  --primary-foreground: #ffffff;
+  --secondary: #fdefd4;
+  --secondary-foreground: #74200f;
+  --muted: #f4efe6;
+  --muted-foreground: #8a7f72;
+  --accent: #fdefd4;
+  --accent-foreground: #74200f;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #ece4d6;
+  --input: #ece4d6;
+  --ring: #910402;
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  /* Gecondenseerde uppercase display-koppen (Figma: DIN Condensed; Oswald-substituut) */
+  .heading-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0.98;
+    letter-spacing: 0.005em;
+  }
+
+  /*
+   * Seigaiha (Aziatisch golf/schub-patroon), tone-on-tone.
+   * Lichte variant voor crème achtergronden (hero, cta, banners).
+   */
+  /* Exact hero-patroon uit Figma: witte basis + concentrische ringen in #F9F9F9. */
+  .bg-seigaiha {
+    background-color: #ffffff;
+    background-image: url("/images/hero-pattern.svg");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .bg-seigaiha-beige {
+    background-color: var(--color-beige-20);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%23e6b98a' stroke-opacity='0.4' stroke-width='1.2'%3E%3Ccircle cx='0' cy='0' r='110'/%3E%3Ccircle cx='0' cy='0' r='74'/%3E%3Ccircle cx='0' cy='0' r='38'/%3E%3Ccircle cx='220' cy='0' r='110'/%3E%3Ccircle cx='220' cy='0' r='74'/%3E%3Ccircle cx='220' cy='0' r='38'/%3E%3Ccircle cx='0' cy='220' r='110'/%3E%3Ccircle cx='0' cy='220' r='74'/%3E%3Ccircle cx='0' cy='220' r='38'/%3E%3Ccircle cx='220' cy='220' r='110'/%3E%3Ccircle cx='220' cy='220' r='74'/%3E%3Ccircle cx='220' cy='220' r='38'/%3E%3Ccircle cx='110' cy='110' r='110'/%3E%3Ccircle cx='110' cy='110' r='74'/%3E%3Ccircle cx='110' cy='110' r='38'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 260px 260px;
+  }
+  /* Donkere variant voor de rode nav-overlay + footer. */
+  .bg-seigaiha-dark {
+    background-color: var(--color-brand-dark);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='1.6'%3E%3Cpath d='M0 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M0 60a44 44 0 0 1 120 0'/%3E%3Cpath d='M0 60a28 28 0 0 1 120 0'/%3E%3Cpath d='M-60 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M-60 60a44 44 0 0 1 120 0'/%3E%3Cpath d='M60 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M60 60a44 44 0 0 1 120 0'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 156px 78px;
+  }
+
+  /* Subtiel seigaiha-patroon op de rode "huisspecialiteiten"-sectie. */
+  .bg-seigaiha-red {
+    background-color: var(--color-brand);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.07' stroke-width='1.6'%3E%3Cpath d='M0 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M0 60a44 44 0 0 1 120 0'/%3E%3Cpath d='M0 60a28 28 0 0 1 120 0'/%3E%3Cpath d='M-60 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M-60 60a44 44 0 0 1 120 0'/%3E%3Cpath d='M60 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M60 60a44 44 0 0 1 120 0'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 156px 78px;
+  }
+
+  /* Marquee (horizontaal scrollende band). */
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+  }
+  .animate-marquee-slow {
+    animation: marquee 45s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
