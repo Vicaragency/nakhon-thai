@@ -49,16 +49,19 @@ export function Hero() {
               className="object-contain object-top"
             />
           </div>
-          {/* centraal schelpgerecht — grootst, prominent gecentreerd */}
-          <div className="pointer-events-auto absolute bottom-[-188px] left-[28.47%] right-[26.74%] aspect-[645/656] transition-transform duration-300 ease-out will-change-transform hover:z-30 hover:-translate-y-12">
-            <Image
-              src="/images/hero-scallops.png"
-              alt="Gestoomde sint-jakobsschelpen met orchidee"
-              fill
-              priority
-              sizes="660px"
-              className="object-contain object-top"
-            />
+          {/* centraal schelpgerecht — begrensd op max-w-1440 en gecentreerd,
+              zodat het op brede schermen niet mee-groeit over de knoppen/titel. */}
+          <div className="absolute inset-0 mx-auto max-w-[1440px]">
+            <div className="pointer-events-auto absolute bottom-[-260px] left-[28.47%] right-[26.74%] aspect-[645/656] transition-transform duration-300 ease-out will-change-transform hover:z-30 hover:-translate-y-12">
+              <Image
+                src="/images/hero-scallops.png"
+                alt="Gestoomde sint-jakobsschelpen met orchidee"
+                fill
+                priority
+                sizes="660px"
+                className="object-contain object-top"
+              />
+            </div>
           </div>
           {/* rechterschotel (soep) — bloedt vanuit de rechterhoek */}
           <div className="pointer-events-auto absolute bottom-[-331px] left-[71.6%] right-[-20.42%] hidden aspect-[703/686] transition-transform duration-300 ease-out will-change-transform hover:z-30 hover:-translate-y-12 sm:block">
