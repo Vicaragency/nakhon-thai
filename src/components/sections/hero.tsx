@@ -37,7 +37,8 @@ export function Hero() {
           Borden bloeden groot vanaf de onderrand; alleen de bovenkant is
           zichtbaar. Hover tilt een bord omhoog zodat het volledig in beeld komt. */}
       <div className="pointer-events-none absolute inset-x-0 bottom-[-57px] h-[689px]">
-        <div className="relative mx-auto h-full w-full max-w-[1440px] overflow-hidden">
+        {/* Volledige schermbreedte (geen max-w) → zijborden bloeden tot de schermrand. */}
+        <div className="relative h-full w-full overflow-hidden">
           {/* linkerschotel (dim sum) — bloedt vanuit de linkerhoek */}
           <div className="pointer-events-auto absolute bottom-[-188px] left-[-6.32%] right-[73.61%] hidden aspect-[471/487] transition-transform duration-300 ease-out will-change-transform hover:z-30 hover:-translate-y-12 sm:block">
             <Image
