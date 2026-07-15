@@ -6,7 +6,7 @@ import { ThaiLantern } from "@/components/brand/ornaments";
 
 export function Hero() {
   return (
-    <section className="relative isolate min-h-[720px] overflow-hidden bg-seigaiha">
+    <section className="relative isolate min-h-[760px] overflow-hidden bg-seigaiha lg:min-h-[900px]">
       {/* Verticale sier-ornamenten (desktop) */}
       <ThaiLantern className="pointer-events-none absolute left-[17%] top-[180px] hidden h-[190px] xl:block" />
       <ThaiLantern className="pointer-events-none absolute right-[17%] top-[180px] hidden h-[190px] xl:block" />
@@ -33,40 +33,40 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Overlappende food-fotografie, bleeding vanaf de onderrand.
-          Hover op een bord: komt omhoog, richt zich op en volledig in beeld. */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[420px]">
-        <div className="relative mx-auto h-full w-full max-w-[1440px]">
-          {/* linkerschotel (kleiner, gelijk aan rechts) */}
-          <div className="pointer-events-auto absolute -left-24 bottom-[-34px] hidden h-[400px] w-[440px] -rotate-6 transition-transform duration-300 ease-out will-change-transform hover:z-30 hover:-translate-y-8 hover:rotate-0 hover:scale-[1.04] sm:block">
+      {/* Food-laag — geometrie 1:1 uit Figma (Hero-instance 231:25459).
+          Borden bloeden groot vanaf de onderrand; alleen de bovenkant is
+          zichtbaar. Hover tilt een bord omhoog zodat het volledig in beeld komt. */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-[-57px] h-[689px]">
+        <div className="relative mx-auto h-full w-full max-w-[1440px] overflow-hidden">
+          {/* linkerschotel (dim sum) — bloedt vanuit de linkerhoek */}
+          <div className="pointer-events-auto absolute bottom-[-188px] left-[-6.32%] right-[73.61%] hidden aspect-[471/487] transition-transform duration-300 ease-out will-change-transform hover:z-30 hover:-translate-y-12 sm:block">
             <Image
               src="/images/cta-dumplings.png"
               alt="Thaise dim sum in een kom"
               fill
-              sizes="440px"
-              className="object-contain object-bottom"
+              sizes="480px"
+              className="object-contain object-top"
             />
           </div>
-          {/* centraal schelpgerecht, grootst en prominent.
-              Geen hover:z-30 → blijft achter de titel zodat die leesbaar blijft. */}
-          <div className="pointer-events-auto absolute bottom-[-56px] left-1/2 h-[500px] w-[650px] -translate-x-1/2 transition-transform duration-300 ease-out will-change-transform hover:-translate-y-8 hover:scale-[1.04]">
+          {/* centraal schelpgerecht — grootst, prominent gecentreerd */}
+          <div className="pointer-events-auto absolute bottom-[-188px] left-[28.47%] right-[26.74%] aspect-[645/656] transition-transform duration-300 ease-out will-change-transform hover:z-30 hover:-translate-y-12">
             <Image
               src="/images/hero-scallops.png"
               alt="Gestoomde sint-jakobsschelpen met orchidee"
               fill
               priority
-              sizes="720px"
-              className="object-contain object-bottom"
+              sizes="660px"
+              className="object-contain object-top"
             />
           </div>
-          {/* rechterschotel (kleiner, gelijk aan links) */}
-          <div className="pointer-events-auto absolute -right-20 bottom-[-34px] hidden h-[400px] w-[440px] rotate-6 transition-transform duration-300 ease-out will-change-transform hover:z-30 hover:-translate-y-8 hover:rotate-0 hover:scale-[1.04] sm:block">
+          {/* rechterschotel (soep) — bloedt vanuit de rechterhoek */}
+          <div className="pointer-events-auto absolute bottom-[-331px] left-[71.6%] right-[-20.42%] hidden aspect-[703/686] transition-transform duration-300 ease-out will-change-transform hover:z-30 hover:-translate-y-12 sm:block">
             <Image
               src="/images/cta-soup.png"
               alt="Pittige Thaise soep"
               fill
-              sizes="440px"
-              className="object-contain object-bottom"
+              sizes="700px"
+              className="object-contain object-top"
             />
           </div>
         </div>
