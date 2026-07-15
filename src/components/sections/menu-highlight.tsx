@@ -7,24 +7,24 @@ const SPECIALTIES = [
   {
     src: "/images/dish-duck.jpg",
     alt: "Krokante Thaise eend op bord",
-    rotate: "lg:-rotate-3",
+    rotate: "lg:-rotate-2",
   },
   {
     src: "/images/dish-dumplings.jpg",
     alt: "Gestoomde dim sum met orchidee",
-    rotate: "lg:translate-y-[-14px]",
+    rotate: "",
   },
   {
     src: "/images/dish-stirfry.jpg",
     alt: "Thaise roerbak met verse groenten",
-    rotate: "lg:rotate-3",
+    rotate: "lg:rotate-2",
   },
 ];
 
 export function MenuHighlight() {
   return (
     <section className="bg-seigaiha-red text-white">
-      <div className="mx-auto w-full max-w-[1080px] px-6 py-20 lg:py-24">
+      <div className="mx-auto w-full max-w-[1340px] px-6 py-20 lg:py-24">
         <div className="flex flex-col items-center text-center">
           <OrnamentDivider className="mb-4 text-white/50" />
           <h2 className="heading-display text-[34px] text-white sm:text-[42px]">
@@ -32,15 +32,15 @@ export function MenuHighlight() {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
           {SPECIALTIES.map((dish, i) => (
             <div key={i} className={`relative ${dish.rotate}`}>
-              <div className="relative aspect-square w-full overflow-hidden rounded-[22px] border-[6px] border-beige-20 shadow-lg">
+              <div className="relative aspect-[364/291] w-full overflow-hidden rounded-[18px] border-[10px] border-beige-20 shadow-lg lg:border-[13px]">
                 <Image
                   src={dish.src}
                   alt={dish.alt}
                   fill
-                  sizes="(max-width: 1024px) 90vw, 380px"
+                  sizes="(max-width: 1024px) 90vw, 420px"
                   className="object-cover"
                 />
               </div>
