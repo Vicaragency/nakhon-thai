@@ -110,23 +110,17 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+  /* Seigaiha-schubpatroon (Figma "Achtergrond") op de crème CTA-sectie. */
   .bg-seigaiha-beige {
     background-color: var(--color-beige-20);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%23e6b98a' stroke-opacity='0.4' stroke-width='1.2'%3E%3Ccircle cx='0' cy='0' r='110'/%3E%3Ccircle cx='0' cy='0' r='74'/%3E%3Ccircle cx='0' cy='0' r='38'/%3E%3Ccircle cx='220' cy='0' r='110'/%3E%3Ccircle cx='220' cy='0' r='74'/%3E%3Ccircle cx='220' cy='0' r='38'/%3E%3Ccircle cx='0' cy='220' r='110'/%3E%3Ccircle cx='0' cy='220' r='74'/%3E%3Ccircle cx='0' cy='220' r='38'/%3E%3Ccircle cx='220' cy='220' r='110'/%3E%3Ccircle cx='220' cy='220' r='74'/%3E%3Ccircle cx='220' cy='220' r='38'/%3E%3Ccircle cx='110' cy='110' r='110'/%3E%3Ccircle cx='110' cy='110' r='74'/%3E%3Ccircle cx='110' cy='110' r='38'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 260px 260px;
+    background-image: url("/patterns/seigaiha-beige.svg");
+    background-size: 118px 118px;
   }
-  /* Donkere variant voor de rode nav-overlay + footer. */
+  /* Donkere seigaiha-variant voor de rode nav-overlay (Figma: tone-on-tone). */
   .bg-seigaiha-dark {
     background-color: var(--color-brand-dark);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.06' stroke-width='1.6'%3E%3Cpath d='M0 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M0 60a44 44 0 0 1 120 0'/%3E%3Cpath d='M0 60a28 28 0 0 1 120 0'/%3E%3Cpath d='M-60 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M-60 60a44 44 0 0 1 120 0'/%3E%3Cpath d='M60 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M60 60a44 44 0 0 1 120 0'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 156px 78px;
-  }
-
-  /* Subtiel seigaiha-patroon op de rode "huisspecialiteiten"-sectie. */
-  .bg-seigaiha-red {
-    background-color: var(--color-brand);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60' viewBox='0 0 120 60'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.07' stroke-width='1.6'%3E%3Cpath d='M0 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M0 60a44 44 0 0 1 120 0'/%3E%3Cpath d='M0 60a28 28 0 0 1 120 0'/%3E%3Cpath d='M-60 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M-60 60a44 44 0 0 1 120 0'/%3E%3Cpath d='M60 60a60 60 0 0 1 120 0'/%3E%3Cpath d='M60 60a44 44 0 0 1 120 0'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 156px 78px;
+    background-image: url("/patterns/seigaiha-dark.svg");
+    background-size: 118px 118px;
   }
 
   /* Marquee (horizontaal scrollende band). */

@@ -23,16 +23,22 @@ const SPECIALTIES = [
 
 export function MenuHighlight() {
   return (
-    <section className="bg-seigaiha-red text-white">
-      <div className="mx-auto w-full max-w-[1340px] px-6 py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-brand text-white">
+      {/* Maze-lijnpatroon (Figma "07") in de onderste helft, subtiel donkerrood. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 top-[40%] rotate-180 bg-[length:100%_100%] bg-no-repeat"
+        style={{ backgroundImage: "url('/patterns/menu-maze.svg')" }}
+      />
+      <div className="relative z-10 mx-auto w-full max-w-[1500px] px-6 py-20 lg:py-24">
         <div className="flex flex-col items-center text-center">
-          <OrnamentDivider className="mb-4 text-white/50" />
+          <OrnamentDivider className="mb-4 text-beige-40" />
           <h2 className="heading-display text-[34px] text-white sm:text-[42px]">
             Onze huisspecialiteiten
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-[76px]">
           {SPECIALTIES.map((dish, i) => (
             <div key={i} className={`relative ${dish.rotate}`}>
               <div className="relative aspect-[364/291] w-full overflow-hidden rounded-[18px] border-[10px] border-beige-20 shadow-lg lg:border-[13px]">
