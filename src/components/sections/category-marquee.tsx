@@ -6,7 +6,7 @@ import { MARQUEE_CATEGORIES } from "@/lib/menu";
 export function CategoryMarquee() {
   const items = [...MARQUEE_CATEGORIES, ...MARQUEE_CATEGORIES];
   return (
-    <section className="overflow-hidden bg-brand py-5 text-white">
+    <section className="overflow-hidden bg-brand-dark py-5 text-white">
       <div className="flex w-max animate-marquee items-center">
         {items.map((cat, i) => (
           <div key={i} className="flex items-center gap-4 pr-12">
