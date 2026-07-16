@@ -50,10 +50,12 @@ export function Deal({
           </div>
           <ScallopBadge
             fill="#ed3fa6"
-            className="absolute -bottom-6 -left-6 w-24"
+            className="absolute left-[-64px] top-[58%] w-[150px] -translate-y-1/2 sm:w-[160px]"
           >
-            <span className="text-[22px] font-semibold text-white">โปร</span>
-            <span className="mt-0.5 text-[11px] font-semibold tracking-wide text-white">
+            <span className="text-[30px] font-semibold leading-none text-white">
+              โปร
+            </span>
+            <span className="mt-1 text-[13px] font-semibold tracking-wide text-white">
               ( DEAL )
             </span>
           </ScallopBadge>

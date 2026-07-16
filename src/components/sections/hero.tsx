@@ -2,14 +2,23 @@ import Image from "next/image";
 
 import { SITE } from "@/lib/site-config";
 import { Button } from "@/components/ui/button";
-import { ThaiLantern } from "@/components/brand/ornaments";
 
 export function Hero() {
   return (
     <section className="relative isolate min-h-[760px] overflow-hidden bg-seigaiha lg:min-h-[900px]">
-      {/* Verticale sier-ornamenten (desktop) */}
-      <ThaiLantern className="pointer-events-none absolute left-[17%] top-[180px] hidden h-[190px] xl:block" />
-      <ThaiLantern className="pointer-events-none absolute right-[17%] top-[180px] hidden h-[190px] xl:block" />
+      {/* Verticale hang-ornamenten uit Figma (desktop) */}
+      <img
+        src="/images/hero-ornament.svg"
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute left-[17%] top-[150px] hidden h-[230px] xl:block"
+      />
+      <img
+        src="/images/hero-ornament.svg"
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute right-[17%] top-[150px] hidden h-[230px] xl:block"
+      />
 
       {/* Tekstblok */}
       <div className="relative z-10 mx-auto flex w-full max-w-[1320px] flex-col items-center px-6 pt-28 text-center lg:pt-32">
