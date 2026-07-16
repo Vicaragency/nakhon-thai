@@ -102,8 +102,7 @@
    * Seigaiha (Aziatisch spiraal/schub-patroon uit Figma "Frame 29"), tone-on-tone.
    * Eén naadloze tegel, per achtergrond een eigen kleurvariant.
    */
-  .bg-seigaiha,
-  .bg-seigaiha-white {
+  .bg-seigaiha {
     background-color: #ffffff;
     background-image: url("/patterns/seigaiha-light.svg");
     background-size: 960px 630px;

@@ -37,7 +37,7 @@ export function MenuList() {
   const left = MENU_CATEGORIES.slice(0, 3);
   const right = MENU_CATEGORIES.slice(3);
   return (
-    <section className="bg-seigaiha-white">
+    <section className="bg-white">
       <div className="mx-auto grid w-full max-w-[1180px] gap-x-16 gap-y-0 px-6 py-4 pb-20 lg:grid-cols-2">
         <div>
           {left.map((cat) => (
