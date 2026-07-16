@@ -116,6 +116,12 @@
     background-image: url("/patterns/seigaiha-beige.svg");
     background-size: 118px 118px;
   }
+  /* Witte variant: wit met subtiele warme bogen (menu-pagina). */
+  .bg-seigaiha-white {
+    background-color: #ffffff;
+    background-image: url("/patterns/seigaiha-white.svg");
+    background-size: 118px 118px;
+  }
   /* Donkere seigaiha-variant voor de rode nav-overlay (Figma: tone-on-tone). */
   .bg-seigaiha-dark {
     background-color: var(--color-brand-dark);
