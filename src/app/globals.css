@@ -99,34 +99,24 @@
   }
 
   /*
-   * Seigaiha (Aziatisch golf/schub-patroon), tone-on-tone.
-   * Lichte variant voor crème achtergronden (hero, cta, banners).
+   * Seigaiha (Aziatisch spiraal/schub-patroon uit Figma "Frame 29"), tone-on-tone.
+   * Eén naadloze tegel, per achtergrond een eigen kleurvariant.
    */
-  /* Exact hero-patroon uit Figma: witte basis + concentrische ringen in #F9F9F9. */
-  .bg-seigaiha {
-    background-color: #ffffff;
-    background-image: url("/images/hero-pattern.svg");
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  /* Seigaiha-schubpatroon (Figma "Achtergrond") op de crème CTA-sectie. */
-  .bg-seigaiha-beige {
-    background-color: var(--color-beige-20);
-    background-image: url("/patterns/seigaiha-beige.svg");
-    background-size: 118px 118px;
-  }
-  /* Witte variant: wit met subtiele warme bogen (menu-pagina). */
+  .bg-seigaiha,
   .bg-seigaiha-white {
     background-color: #ffffff;
-    background-image: url("/patterns/seigaiha-white.svg");
-    background-size: 118px 118px;
+    background-image: url("/patterns/seigaiha-light.svg");
+    background-size: 960px 630px;
   }
-  /* Donkere seigaiha-variant voor de rode nav-overlay (Figma: tone-on-tone). */
+  .bg-seigaiha-beige {
+    background-color: var(--color-beige-20);
+    background-image: url("/patterns/seigaiha-cream.svg");
+    background-size: 960px 630px;
+  }
   .bg-seigaiha-dark {
     background-color: var(--color-brand-dark);
     background-image: url("/patterns/seigaiha-dark.svg");
-    background-size: 118px 118px;
+    background-size: 960px 630px;
   }
 
   /* Marquee (horizontaal scrollende band). */
