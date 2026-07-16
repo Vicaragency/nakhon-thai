@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Oswald } from "next/font/google";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "../globals.css";
 
 import { SiteHeader } from "@/components/layout/site-header";
@@ -12,11 +13,12 @@ const inter = Inter({
   display: "swap",
 });
 
-// Gecondenseerde display-font voor de uppercase koppen (substituut voor DIN Condensed).
-const oswald = Oswald({
-  variable: "--font-oswald",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+// Gecondenseerde display-font voor de uppercase koppen: DIN Condensed (zelf-gehost, Bold).
+const dinCondensed = localFont({
+  src: "../../fonts/din-condensed-bold.woff2",
+  variable: "--font-din",
+  weight: "700",
+  style: "normal",
   display: "swap",
 });
 
@@ -63,7 +65,7 @@ export default function SiteLayout({
   return (
     <html
       lang="nl"
-      className={`${inter.variable} ${oswald.variable} h-full antialiased`}
+      className={`${inter.variable} ${dinCondensed.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <SiteHeader />

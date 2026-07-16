@@ -9,7 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter), "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-display: var(--font-oswald), "Oswald", "Arial Narrow", sans-serif;
+  --font-display: var(--font-din), "DIN Condensed", "Arial Narrow", sans-serif;
   --font-heading: var(--font-display);
 
   /* Nakhon Thai brand palette (uit Figma variables) */
@@ -89,7 +89,7 @@
 }
 
 @layer components {
-  /* Gecondenseerde uppercase display-koppen (Figma: DIN Condensed; Oswald-substituut) */
+  /* Gecondenseerde uppercase display-koppen (DIN Condensed, zelf-gehost) */
   .heading-display {
     font-family: var(--font-display);
     font-weight: 700;
